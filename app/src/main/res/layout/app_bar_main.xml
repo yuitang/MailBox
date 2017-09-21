@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yui.mailbox.main.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/My.AppBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title=""
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <ImageView
+                android:id="@+id/main_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/menu_press"
+                android:padding="6dp"
+                android:clickable="true"
+                android:onClick="onClick"/>
+
+            <ImageView
+                android:id="@+id/add_contact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/add_contact_press"
+                android:padding="6dp"
+                android:clickable="true"
+                android:onClick="onClick"/>
+
+            <ImageView
+                android:id="@+id/write_mail"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/write_mail_press"
+                android:layout_marginRight="12dp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:onClick="onClick"/>
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="收件箱"
+                android:textColor="#2c2c2c"
+                android:textSize="14sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+
+</android.support.design.widget.CoordinatorLayout>

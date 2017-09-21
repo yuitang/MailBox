@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/shoujianxiang"
+            android:icon="@drawable/shoujianxiang2"
+            android:title="收件箱"/>
+        <item
+            android:id="@+id/caogaoxiang"
+            android:icon="@drawable/caogaoxiang1"
+            android:title="草稿箱"/>
+        <item
+            android:id="@+id/yifasong"
+            android:icon="@drawable/yifasong1"
+            android:title="已发送"/>
+        <item
+            android:id="@+id/lajiyoujian"
+            android:icon="@drawable/laji1"
+            android:title="垃圾邮件"/>
+        <item
+            android:id="@+id/yishanchu"
+            android:icon="@drawable/yishanchu1"
+            android:title="已删除"/>
+    </group>
+
+</menu>

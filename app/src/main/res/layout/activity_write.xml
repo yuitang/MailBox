@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+    android:id="@+id/write_main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:text="取消"
+            android:textColor="#2c2c2c"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:text="发送"
+            android:textColor="#2c2c2c"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:onClick="onClick"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收件人"
+                android:textColor="@color/smallgray"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/add_address"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/add_padding"
+                android:src="@drawable/add"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="onClick"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/smallgray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_toRightOf="@+id/txt"
+                android:layout_toLeftOf="@+id/add_address"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/temp_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抄    送"
+                android:textColor="@color/smallgray"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/add_cs"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/add_padding"
+                android:src="@drawable/add"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="onClick"
+                />
+
+            <EditText
+                android:id="@+id/cs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt1"
+                android:layout_toLeftOf="@+id/add_cs"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:background="@null"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/smallgray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/temp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抄送/密送"
+                android:textColor="@color/smallgray"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/add_ms"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/add_padding"
+                android:src="@drawable/add"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="onClick"
+                />
+
+            <EditText
+                android:id="@+id/ms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt2"
+                android:layout_toLeftOf="@+id/add_ms"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:background="@null"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/smallgray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/tempx"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/add_file"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/file_add_1"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:gravity="bottom"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tempx"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:hint="主题"
+                android:textColorHint="@color/smallgray"
+                android:background="@null"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/smallgray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="来自邮客客户端"
+            android:minHeight="100dp"
+            android:layout_margin="20dp"
+            android:textSize="15sp"
+            android:background="@color/white"
+            android:gravity="left|top"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

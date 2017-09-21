@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="sendcloud_white">#ffffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="title_color">#ff999999</color>
+    <color name="lv_tv_color">#ff353535</color>
+    <color name="smssdk_lv_title_color">#ff999999</color>
+    <color name="mediumturquoise">#48d1cc</color> <!-- 中绿宝石 -->
+    <color name="smallgray">#e6e6e6</color> <!--小灰色-->
+    <color name="beige">#f5f5dc</color> <!--米色-->
+    <color name="bottombar">#FAFAFA</color> <!--底部导航栏颜色-->
+    <color name="dark">#000000</color>
+    <color name="btnpress">#eeeeee</color>
+    <color name="itempress">#e2e9f5</color> <!--#d4e1f4-->
+
+</resources>

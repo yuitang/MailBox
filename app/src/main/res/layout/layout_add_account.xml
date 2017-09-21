@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:text="添加邮箱账号"
+        android:textColor="@color/lv_tv_color"
+        android:gravity="center"
+        android:textSize="22sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/del_edtx"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/edit_cancel"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/del_edtx"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            android:hint="暂只支持QQ邮箱"
+            android:textColorHint="@color/title_color"
+            android:background="@null"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/smallgray"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/look"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/close_password"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/cancel_password"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/edit_cancel"
+            android:layout_toLeftOf="@+id/look"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/cancel_password"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:hint="授权码（请前往QQ邮箱Web端申请）"
+            android:textColorHint="@color/title_color"
+            android:background="@null"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/smallgray"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/sdk_btn"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:onClick="onClick"
+        />
+
+</LinearLayout>
